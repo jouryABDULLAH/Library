@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Roboto&display=swap');
+
+:root{
+    --strong-color: #831843;
+    --light-color: #fbf2f7;
+    --lighter-color: #f4eef1;
+    --rose: #9f1239;
+    --border: #500724;
+    --read: #5bb47b;
+    --not-read: #db4343;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--light-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    border: none;
+    height: 0.1rem;
+    background-color: var(--strong-color);
+}
+
+header{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--strong-color);
+    border-bottom: 0.2rem var(--border) solid;
+}
+
+main{
+    padding: 3rem;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 5rem;
+}
+
+#add-book{
+    padding: 0.5rem 3rem;
+    background-color: var(--lighter-color);
+    border: 2px solid var(--strong-color);
+    border-radius: 0.6rem;
+    color: var(--strong-color);
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+}
+
+.books{
+    
+}
+
+.book-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem,1fr));
+    gap: 1rem;
+    width: 80vw;
+}
+
+.book{
+    background-color: var(--lighter-color);
+    padding: 1rem;
+    padding-right: 3.5rem;
+    line-height: 2rem;
+    border: 2px solid var(--strong-color);
+    border-radius: 0.6rem;
+    position: relative;
+    font-size: 1.01rem;
+}
+
+.change-read-status{
+    background-color: var(--strong-color);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+}
+
+.reading-status{
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    color: white;
+    /* background-color: var(--read); */
+    padding: 0.01rem 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.read{
+   background-color: var(--read); 
+}
+
+.not-read{
+    background-color: var(--not-read); 
+}
+
+.temp-tip{
+    /* display: none; */
+    margin-top: 5rem;
+    text-align: center;
+    font-family: 'Lugrasimo', cursive;
+    color: var(--border);
+}
+
+.qoute-credit{
+    display: block;
+    margin-left: 17rem;
+    margin-top: 1rem;
+}
