@@ -3,7 +3,9 @@
 :root{
     --strong-color: #831843;
     --light-color: #fbf2f7;
-    --lighter-color: #f4eef1;
+    --lighter-color: #fefafa;
+    --grey: rgb(196, 182, 182);
+    --dark-grey: rgb(152, 138, 138);
     --rose: #9f1239;
     --border: #500724;
     --read: #5bb47b;
@@ -47,15 +49,82 @@ main{
     gap: 5rem;
 }
 
+form{
+    background-color: var(--light-color);
+    display: flex;
+    color: var(--border);
+    flex-direction: column;
+    gap: 2rem;
+}
+
+input{
+    border: 1px solid var(--border);
+    border-radius: 0.2rem;
+}
+
+.sec1{
+    display: flex;
+    gap: 1rem;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.sec2{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* input[type="checkbox"]::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    background-color: var(--border);
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 16%;
+    transition: all 0.4s;
+  }
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    background: #eee;
+    transition: all 0.4s;
+} */
+
 #add-book{
-    padding: 0.5rem 3rem;
+    padding: 0.1rem 1rem;
     background-color: var(--lighter-color);
-    border: 2px solid var(--strong-color);
-    border-radius: 0.6rem;
-    color: var(--strong-color);
-    font-size: 1.2rem;
+    border: 2px solid var(--border);
+    border-radius: 0.2rem;
+    color: var(--border);
+    align-self: flex-start;
+    /* font-size: 1.2rem; */
     /* font-weight: bold; */
 }
+
+#add-book:hover,#add-book:active{
+    cursor: pointer;
+    color: white;
+}
+
+#add-book:hover{
+    background-color: var(--grey);
+}
+#add-book:active{
+    background-color: var(--dark-grey);
+}
+
 
 .books{
     
@@ -79,7 +148,13 @@ main{
     font-size: 1.01rem;
 }
 
-.change-read-status{
+.book-card-buttons{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.change-read-status, 
+.delet-button{
     background-color: var(--strong-color);
     color: white;
     border: none;
@@ -106,8 +181,8 @@ main{
     background-color: var(--not-read); 
 }
 
-.temp-tip{
-    /* display: none; */
+#temp-qoute{
+    /* visibility: hidden; */
     margin-top: 5rem;
     text-align: center;
     font-family: 'Lugrasimo', cursive;

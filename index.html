@@ -12,10 +12,37 @@
     <header>
         <div class="logo">LIBRARY</div>
     </header>
+
     <main>
-        <button id= "add-book">Add Book</button>
+        <form action="">
+            <div class="sec1">
+                <div class="inputs">
+                    <label for="book-title">Book Title</label>
+                    <input type="text" id="book-title">
+                </div>
+    
+                <div class="inputs">
+                    <label for="book-author">Book author</label>
+                    <input type="text" id="book-author">
+                </div>
+    
+                <div class="inputs">
+                    <label for="NoP">Number of Pages</label>
+                    <input type="tel" id="NoP">
+                </div>
+            </div>
+            <div class="sec2">
+                <div>
+                    <input type="checkbox" id="readCheck">
+                    <label for="readCheck">Have you read it?</label>
+                </div>
+                <button id= "add-book" type="submit">Add Book</button>
+            </div>
+            
+        </form>
+
         <div class="books">
-            <p class="temp-tip">
+            <p id="temp-qoute">
                 We read to know we are not alone
                 <span class="qoute-credit">-C.S.Lewis</span> 
             </p>
@@ -29,11 +56,16 @@
                     <hr>
                     <div class="pages">number of pages:</div>
                     <hr>
-                    <button class="change-read-status">change read status</button>
+                    <div class="book-card-buttons">
+                        <button class="change-read-status">change read status</button>
+                        <button class="delet-button">Delete Book</button>
+                    </div>
                     <div class="reading-status not-read">read</div>
                 </div> -->
             </div>
         </div>
     </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
