@@ -64,6 +64,7 @@ input{
 
 .sec1{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -130,7 +131,7 @@ input[type="checkbox"] {
     
 }
 
-.book-cards{
+#book-cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(23rem,1fr));
     gap: 1rem;
@@ -163,12 +164,26 @@ input[type="checkbox"] {
     padding: 0.3rem;
 }
 
+.delet-button{
+    background-color: var(--border);
+}
+
+.change-read-status:hover, 
+.delet-button:hover{
+    cursor: pointer;
+    background-color: var(--rose);
+}
+
+.change-read-status:active, 
+.delet-button:active{
+    opacity: 0.5;
+}
+
 .reading-status{
     position: absolute;
     right: 10px;
     top: 6px;
     color: white;
-    /* background-color: var(--read); */
     padding: 0.01rem 0.3rem;
     border-radius: 0.2rem;
 }
@@ -182,7 +197,7 @@ input[type="checkbox"] {
 }
 
 #temp-qoute{
-    /* visibility: hidden; */
+    /* display: hidden; */
     margin-top: 5rem;
     text-align: center;
     font-family: 'Lugrasimo', cursive;
